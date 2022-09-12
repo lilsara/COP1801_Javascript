@@ -1,12 +1,17 @@
 
-var amountEntered;
+
 var amount = prompt("How much was the meal? $: ");
+if (amount > 5 && amount< 500){
 var total;
-amountEntered = () => {
+amountEntered = (amount) => {
   Number(amount);
 }
-
-function totalAmount(){
+totalAmount(amount);
+}
+else{
+  window.alert("Error");
+}
+function totalAmount(amountEntered){
 
 let i = prompt("How was service: 1. Great, 2. Ok, 3. Poor: ");
     if(i == 1){
@@ -28,6 +33,3 @@ else{
   window.alert("Error");
 }
 }
-
-
-totalAmount();
